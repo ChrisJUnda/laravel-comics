@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComicController;
 use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 //Rotta HomePage
 Route::get('/', [PageController::class, 'index']);
+
+//Fumetti
+
+Route::resource('comics', ComicController::class);
